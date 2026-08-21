@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 public class ResourceNetwork : MonoBehaviour
 {
+    public ApiSettings apiSettings;
     //背包管理器引用，网络拿到服务器数据后交给Manager更新背包
     public ResourseManager manager;
     void Start()
@@ -10,8 +11,6 @@ public class ResourceNetwork : MonoBehaviour
         //脚本加载启动时，自动向服务器拉取全部资源数据
         LoadResourceFromServer();
     }
-    //后端新增资源API地址
-    string url = "http://81.71.101.96:8080/resource/add";
     //对外暴露方法，向服务器提交新增资源
     public void AddResourceToServer(ResourseData resource)
     {
@@ -26,10 +25,12 @@ public class ResourceNetwork : MonoBehaviour
     //协程：POST请求，上传新增资源信息到后端
     IEnumerator SendResource(ResourseData resource)
     {
+        //后端新增资源API地址
+        string fullUrl = apiSettings.baseUrl + "/resource/add";
         //把C#实体类序列化为JSON文本，用于网络传输
         string json = JsonUtility.ToJson(resource);
         //构造网络请求：指定目标地址+请求方法
-        UnityWebRequest request = new UnityWebRequest(url, "POST");
+        UnityWebRequest request = new UnityWebRequest(fullUrl, "POST");
         //将JSON字符串转为UTF-8二进制字节数组，作为请求体
         byte[] body = System.Text.Encoding.UTF8.GetBytes(json);
         request.uploadHandler = new UploadHandlerRaw(body);
@@ -52,9 +53,9 @@ public class ResourceNetwork : MonoBehaviour
     //协程：GET请求，获取玩家全部背包资源
     IEnumerator GetResource()
     {
-        string url = "http://81.71.101.96:8080/resource/list";
+        string fullUrl =apiSettings.baseUrl+ "/resource/list";
         //快速创建GET请求
-        UnityWebRequest request = UnityWebRequest.Get(url);
+        UnityWebRequest request = UnityWebRequest.Get(fullUrl);
         yield return request.SendWebRequest();
         Debug.Log(request.result);
         Debug.Log(request.downloadHandler.text);

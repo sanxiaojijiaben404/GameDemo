@@ -466,6 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bb3335b43348745a96d51089485c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  apiSettings: {fileID: 11400000, guid: 8d9a578d320581f41bfc8cdb3ae4a8e4, type: 2}
   manager: {fileID: 1038307322}
 --- !u!4 &208635687
 Transform:

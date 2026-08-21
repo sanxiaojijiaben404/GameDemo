@@ -145,3 +145,6 @@ InitTestScene*.unity*
 Assets/Assets/
 Assets/craftpix-*/
 
+# api配置资源
+Assets/**/ApiSettings.asset
+Assets/**/ApiSettings.asset.meta
