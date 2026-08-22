@@ -1,0 +1,101 @@
+{ "skeleton": { "images": "D:/исходники/Water/Water8/image/" },
+"PhotoshopToSpine": { "scale": 0.71, "padding": 1, "trim": true },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "Слой 0", "bone": "root", "attachment": "Слой 0" },
+	{ "name": "water100001", "bone": "root", "attachment": "water100001" },
+	{ "name": "water100002", "bone": "root", "attachment": "water100002" },
+	{ "name": "water100003", "bone": "root", "attachment": "water100003" },
+	{ "name": "water100004", "bone": "root", "attachment": "water100004" },
+	{ "name": "water100005", "bone": "root", "attachment": "water100005" },
+	{ "name": "water100006", "bone": "root", "attachment": "water100006" },
+	{ "name": "water100007", "bone": "root", "attachment": "water100007" },
+	{ "name": "water100008", "bone": "root", "attachment": "water100008" },
+	{ "name": "water100009", "bone": "root", "attachment": "water100009" },
+	{ "name": "water100010", "bone": "root", "attachment": "water100010" },
+	{ "name": "water100011", "bone": "root", "attachment": "water100011" },
+	{ "name": "water100012", "bone": "root", "attachment": "water100012" },
+	{ "name": "water100013", "bone": "root", "attachment": "water100013" },
+	{ "name": "water100014", "bone": "root", "attachment": "water100014" },
+	{ "name": "water100015", "bone": "root", "attachment": "water100015" },
+	{ "name": "water100016", "bone": "root", "attachment": "water100016" },
+	{ "name": "water100017", "bone": "root", "attachment": "water100017" },
+	{ "name": "water100018", "bone": "root", "attachment": "water100018" },
+	{ "name": "water100019", "bone": "root", "attachment": "water100019" },
+	{ "name": "water100020", "bone": "root", "attachment": "water100020" },
+	{ "name": "water100000", "bone": "root", "attachment": "water100000" }
+],
+"skins": {
+	"default": {
+		"Слой 0": {
+			"Слой 0": { "x": 381.5, "y": -191, "width": 765, "height": 384 }
+		},
+		"water100001": {
+			"water100001": { "x": 385.34, "y": -191, "width": 270, "height": 171 }
+		},
+		"water100002": {
+			"water100002": { "x": 381.5, "y": -190.89, "width": 268, "height": 158 }
+		},
+		"water100003": {
+			"water100003": { "x": 380.71, "y": -191.02, "width": 265, "height": 154 }
+		},
+		"water100004": {
+			"water100004": { "x": 383.18, "y": -190.83, "width": 260, "height": 138 }
+		},
+		"water100005": {
+			"water100005": { "x": 383.1, "y": -190.41, "width": 257, "height": 140 }
+		},
+		"water100006": {
+			"water100006": { "x": 380.68, "y": -190.54, "width": 255, "height": 136 }
+		},
+		"water100007": {
+			"water100007": { "x": 379.89, "y": -190.83, "width": 252, "height": 138 }
+		},
+		"water100008": {
+			"water100008": { "x": 378.57, "y": -190.97, "width": 238, "height": 161 }
+		},
+		"water100009": {
+			"water100009": { "x": 378.31, "y": -190.86, "width": 246, "height": 148 }
+		},
+		"water100010": {
+			"water100010": { "x": 378.6, "y": -190.38, "width": 248, "height": 130 }
+		},
+		"water100011": {
+			"water100011": { "x": 369.43, "y": -190.41, "width": 268, "height": 140 }
+		},
+		"water100012": {
+			"water100012": { "x": 372.56, "y": -190.47, "width": 270, "height": 160 }
+		},
+		"water100013": {
+			"water100013": { "x": 366.57, "y": -190.28, "width": 285, "height": 144 }
+		},
+		"water100014": {
+			"water100014": { "x": 355.56, "y": -190.62, "width": 307, "height": 139 }
+		},
+		"water100015": {
+			"water100015": { "x": 359.56, "y": -190.39, "width": 315, "height": 157 }
+		},
+		"water100016": {
+			"water100016": { "x": 357.51, "y": -190.65, "width": 318, "height": 149 }
+		},
+		"water100017": {
+			"water100017": { "x": 361.48, "y": -190.42, "width": 316, "height": 167 }
+		},
+		"water100018": {
+			"water100018": { "x": 361.11, "y": -190.76, "width": 311, "height": 162 }
+		},
+		"water100019": {
+			"water100019": { "x": 354.07, "y": -190.31, "width": 331, "height": 154 }
+		},
+		"water100020": {
+			"water100020": { "x": 359.3, "y": -190.73, "width": 323, "height": 152 }
+		},
+		"water100000": {
+			"water100000": { "x": 379.85, "y": -191.52, "width": 286, "height": 155 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

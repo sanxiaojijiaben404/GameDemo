@@ -19,7 +19,7 @@ If only pinyin were universally used aroud the word.....
 |		|	    |	|---（手动加进去）
 |   	|   	|--- 📁 craftpix-895410-free-jungle-cartoon-.../   # 丛林卡通风格资源包
 |   	|   	|   |
-|   	|   	|   |--- （有）
+|   	|   	|   |--- （手动加进去）
 |   	|   	|
 |   	|   	|--- 📁 Scenes/                      # 场景文件
 |   	|   	|   |

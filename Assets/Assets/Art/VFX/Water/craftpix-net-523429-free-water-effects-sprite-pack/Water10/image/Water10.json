@@ -1,0 +1,53 @@
+{ "skeleton": { "images": "D:/исходники/Water/Water10/image/" },
+"PhotoshopToSpine": { "scale": 0.71, "padding": 1, "trim": true },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "water100001", "bone": "root", "attachment": "water100001" },
+	{ "name": "water100002", "bone": "root", "attachment": "water100002" },
+	{ "name": "water100003", "bone": "root", "attachment": "water100003" },
+	{ "name": "water100004", "bone": "root", "attachment": "water100004" },
+	{ "name": "water100005", "bone": "root", "attachment": "water100005" },
+	{ "name": "water100006", "bone": "root", "attachment": "water100006" },
+	{ "name": "water100007", "bone": "root", "attachment": "water100007" },
+	{ "name": "water100008", "bone": "root", "attachment": "water100008" },
+	{ "name": "water100009", "bone": "root", "attachment": "water100009" },
+	{ "name": "water100000", "bone": "root", "attachment": "water100000" },
+],
+"skins": {
+	"default": {
+		"water100001": {
+			"water100001": { "x": 291.63, "y": -287.17, "width": 84, "height": 41 }
+		},
+		"water100002": {
+			"water100002": { "x": 381.38, "y": -191.09, "width": 512, "height": 343 }
+		},
+		"water100003": {
+			"water100003": { "x": 290.18, "y": -259.19, "width": 216, "height": 110 }
+		},
+		"water100004": {
+			"water100004": { "x": 295.73, "y": -250.1, "width": 291, "height": 133 }
+		},
+		"water100005": {
+			"water100005": { "x": 288.09, "y": -240.77, "width": 324, "height": 147 }
+		},
+		"water100006": {
+			"water100006": { "x": 300.72, "y": -229.05, "width": 345, "height": 169 }
+		},
+		"water100007": {
+			"water100007": { "x": 381.38, "y": -191.09, "width": 512, "height": 343 }
+		},
+		"water100008": {
+			"water100008": { "x": 331.3, "y": -202.8, "width": 409, "height": 223 }
+		},
+		"water100009": {
+			"water100009": { "x": 333.59, "y": -204.43, "width": 415, "height": 222 }
+		},
+		"water100000": {
+			"water100000": { "x": 292.01, "y": -288.01, "width": 45, "height": 37 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

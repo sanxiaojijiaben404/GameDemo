@@ -141,6 +141,9 @@ InitTestScene*.unity*
 *.pdf
 *.raw
 
-# 素材文件夹
-Assets/Assets/
-Assets/craftpix-*/
+# 压缩包
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.zip

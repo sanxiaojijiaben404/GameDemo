@@ -1,0 +1,82 @@
+{
+"skeleton": {
+	"hash": "z5drO/K/jwl4rKAvQoSMI9n1TEg",
+	"spine": "3.8.75",
+	"x": 160.17,
+	"y": -362.27,
+	"width": 322,
+	"height": 124,
+	"images": "./image/",
+	"audio": "D:/исходники/Water/Water3/image"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 267.8, "rotation": 90, "x": 312.92, "y": -316.97 }
+],
+"slots": [
+	{ "name": "water30000", "bone": "bone", "attachment": "water30000" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"water30000": {
+				"water30000": { "x": 16.7, "y": -8.25, "rotation": -90, "width": 322, "height": 124 },
+				"water30001": { "x": 7.48, "y": -8, "rotation": -90, "width": 286, "height": 97 },
+				"water30002": { "x": 13.53, "y": -8.11, "rotation": -90, "width": 228, "height": 92 },
+				"water30003": { "x": 13.22, "y": -8.04, "rotation": -90, "width": 181, "height": 77 },
+				"water30004": { "x": 22.96, "y": -8.39, "rotation": -90, "width": 132, "height": 49 },
+				"water30005": { "x": 52.63, "y": -8.2, "rotation": -90, "width": 116, "height": 99 },
+				"water30006": { "x": 81.04, "y": -8.22, "rotation": -90, "width": 99, "height": 143 },
+				"water30007": { "x": 100.7, "y": -8.16, "rotation": -90, "width": 79, "height": 169 },
+				"water30008": { "x": 137.91, "y": -7.92, "rotation": -90, "width": 70, "height": 238 },
+				"water30009": { "x": 145.26, "y": -8.48, "rotation": -90, "width": 91, "height": 273 },
+				"water30010": { "x": 147.04, "y": -8.23, "rotation": -90, "width": 126, "height": 295 },
+				"water30011": { "x": 140.99, "y": -7.94, "rotation": -90, "width": 195, "height": 300 },
+				"water30012": { "x": 122.61, "y": -8.25, "rotation": -90, "width": 251, "height": 297 },
+				"water30013": { "x": 88.18, "y": -8.16, "rotation": -90, "width": 292, "height": 248 },
+				"water30014": { "x": 49.52, "y": -8.1, "rotation": -90, "width": 343, "height": 189 },
+				"water30015": { "x": 30.6, "y": -8.37, "rotation": -90, "width": 362, "height": 153 },
+				"water30016": { "x": 33.99, "y": -8.21, "rotation": -90, "width": 356, "height": 159 },
+				"water30017": { "x": 36.25, "y": -7.85, "rotation": -90, "width": 378, "height": 163 },
+				"water30018": { "x": 39.64, "y": -8.46, "rotation": -90, "width": 392, "height": 169 },
+				"water30019": { "x": 39.2, "y": -8.26, "rotation": -90, "width": 349, "height": 150 },
+				"water30020": { "x": 38.38, "y": -8.06, "rotation": -90, "width": 377, "height": 163 },
+				"water30021": { "x": 38.51, "y": -11.8, "rotation": -90, "width": 393, "height": 167 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"water30000": {
+				"attachment": [
+					{ "name": "water30000" },
+					{ "time": 0.0333, "name": "water30001" },
+					{ "time": 0.0667, "name": "water30002" },
+					{ "time": 0.1, "name": "water30003" },
+					{ "time": 0.1333, "name": "water30004" },
+					{ "time": 0.1667, "name": "water30005" },
+					{ "time": 0.2, "name": "water30006" },
+					{ "time": 0.2333, "name": "water30007" },
+					{ "time": 0.2667, "name": "water30008" },
+					{ "time": 0.3, "name": "water30009" },
+					{ "time": 0.3333, "name": "water30010" },
+					{ "time": 0.3667, "name": "water30011" },
+					{ "time": 0.4, "name": "water30012" },
+					{ "time": 0.4333, "name": "water30013" },
+					{ "time": 0.4667, "name": "water30014" },
+					{ "time": 0.5, "name": "water30015" },
+					{ "time": 0.5333, "name": "water30016" },
+					{ "time": 0.5667, "name": "water30017" },
+					{ "time": 0.6, "name": "water30018" },
+					{ "time": 0.6333, "name": "water30019" },
+					{ "time": 0.6667, "name": "water30020" },
+					{ "time": 0.7, "name": "water30021" }
+				]
+			}
+		}
+	}
+}
+}

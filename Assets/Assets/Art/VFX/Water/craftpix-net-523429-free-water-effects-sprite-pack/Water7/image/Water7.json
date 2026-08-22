@@ -1,0 +1,65 @@
+{ "skeleton": { "images": "D:/исходники/Water/Water7/image/" },
+"PhotoshopToSpine": { "scale": 0.71, "padding": 1, "trim": true },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "water70000", "bone": "root", "attachment": "water70000" },
+	{ "name": "water70001", "bone": "root", "attachment": "water70001" },
+	{ "name": "water70002", "bone": "root", "attachment": "water70002" },
+	{ "name": "water70003", "bone": "root", "attachment": "water70003" },
+	{ "name": "water70004", "bone": "root", "attachment": "water70004" },
+	{ "name": "water70005", "bone": "root", "attachment": "water70005" },
+	{ "name": "water70006", "bone": "root", "attachment": "water70006" },
+	{ "name": "water70007", "bone": "root", "attachment": "water70007" },
+	{ "name": "water70008", "bone": "root", "attachment": "water70008" },
+	{ "name": "water70009", "bone": "root", "attachment": "water70009" },
+	{ "name": "water70010", "bone": "root", "attachment": "water70010" },
+	{ "name": "water70011", "bone": "root", "attachment": "water70011" },
+	{ "name": "water70012", "bone": "root", "attachment": "water70012" },
+],
+"skins": {
+	"default": {
+		"water70000": {
+			"water70000": { "x": 153.73, "y": -217, "width": 7, "height": 10 }
+		},
+		"water70001": {
+			"water70001": { "x": 159.26, "y": -213.49, "width": 28, "height": 47 }
+		},
+		"water70002": {
+			"water70002": { "x": 182.39, "y": -207.41, "width": 70, "height": 103 }
+		},
+		"water70003": {
+			"water70003": { "x": 204.89, "y": -204.95, "width": 115, "height": 135 }
+		},
+		"water70004": {
+			"water70004": { "x": 219.6, "y": -209.02, "width": 143, "height": 190 }
+		},
+		"water70005": {
+			"water70005": { "x": 263.26, "y": -215.67, "width": 236, "height": 253 }
+		},
+		"water70006": {
+			"water70006": { "x": 344.94, "y": -210.28, "width": 246, "height": 42 }
+		},
+		"water70007": {
+			"water70007": { "x": 381.38, "y": -191.09, "width": 512, "height": 343 }
+		},
+		"water70008": {
+			"water70008": { "x": 446.59, "y": -194.83, "width": 286, "height": 75 }
+		},
+		"water70009": {
+			"water70009": { "x": 570.6, "y": -187.65, "width": 64, "height": 143 }
+		},
+		"water70010": {
+			"water70010": { "x": 569.67, "y": -189.49, "width": 109, "height": 212 }
+		},
+		"water70011": {
+			"water70011": { "x": 561.85, "y": -198.46, "width": 153, "height": 291 }
+		},
+		"water70012": {
+			"water70012": { "x": 548.79, "y": -193.61, "width": 178, "height": 331 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

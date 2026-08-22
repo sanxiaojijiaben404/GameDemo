@@ -1,0 +1,83 @@
+
+Water6.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+water60000
+  rotate: false
+  xy: 898, 971
+  size: 94, 43
+  orig: 94, 43
+  offset: 0, 0
+  index: -1
+water60001
+  rotate: false
+  xy: 2, 671
+  size: 512, 343
+  orig: 512, 343
+  offset: 0, 0
+  index: -1
+water60002
+  rotate: false
+  xy: 346, 51
+  size: 128, 274
+  orig: 128, 274
+  offset: 0, 0
+  index: -1
+water60003
+  rotate: false
+  xy: 417, 339
+  size: 196, 330
+  orig: 196, 330
+  offset: 0, 0
+  index: -1
+water60004
+  rotate: true
+  xy: 2, 16
+  size: 309, 342
+  orig: 309, 342
+  offset: 0, 0
+  index: -1
+water60005
+  rotate: false
+  xy: 615, 344
+  size: 312, 330
+  orig: 312, 330
+  offset: 0, 0
+  index: -1
+water60006
+  rotate: false
+  xy: 516, 676
+  size: 380, 338
+  orig: 380, 338
+  offset: 0, 0
+  index: -1
+water60007
+  rotate: false
+  xy: 2, 327
+  size: 413, 342
+  orig: 413, 342
+  offset: 0, 0
+  index: -1
+water60008
+  rotate: true
+  xy: 2, 2
+  size: 12, 304
+  orig: 12, 304
+  offset: 0, 0
+  index: -1
+water60009
+  rotate: false
+  xy: 898, 952
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+water60010
+  rotate: false
+  xy: 346, 24
+  size: 72, 25
+  orig: 72, 25
+  offset: 0, 0
+  index: -1

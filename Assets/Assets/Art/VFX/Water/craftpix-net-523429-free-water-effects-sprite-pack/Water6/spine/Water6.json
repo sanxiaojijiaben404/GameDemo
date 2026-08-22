@@ -1,0 +1,60 @@
+{
+"skeleton": {
+	"hash": "Ecv9+4Q/Qdh9c+cM6TNfLEVk910",
+	"spine": "3.8.75",
+	"x": 335.54,
+	"y": -335.94,
+	"width": 94,
+	"height": 43,
+	"images": "./Image/",
+	"audio": "D:/исходники/Water/Water6/Image"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 337.03, "rotation": 90.87, "x": 381.74, "y": -328.74 }
+],
+"slots": [
+	{ "name": "water60000", "bone": "bone", "attachment": "water60000" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"water60000": {
+				"water60000": { "x": 14.29, "y": -1.01, "rotation": -90.87, "width": 94, "height": 43 },
+				"water60001": { "x": 137.64, "y": -1.73, "rotation": -90.87, "width": 512, "height": 343 },
+				"water60002": { "x": 121, "y": -2.59, "rotation": -90.87, "width": 128, "height": 274 },
+				"water60003": { "x": 137.73, "y": -2.77, "rotation": -90.87, "width": 196, "height": 330 },
+				"water60004": { "x": 137.42, "y": -2.46, "rotation": -90.87, "width": 309, "height": 342 },
+				"water60005": { "x": 144.13, "y": -2.64, "rotation": -90.87, "width": 312, "height": 330 },
+				"water60006": { "x": 137.29, "y": -2.46, "rotation": -90.87, "width": 380, "height": 338 },
+				"water60007": { "x": 137.41, "y": -2.63, "rotation": -90.87, "width": 413, "height": 342 },
+				"water60008": { "x": 135.82, "y": -3.04, "rotation": -90.87, "width": 12, "height": 304 },
+				"water60009": { "x": -6.08, "y": -0.54, "rotation": -90.87, "width": 17, "height": 17 },
+				"water60010": { "x": -6.9, "y": -25.19, "rotation": -90.87, "width": 72, "height": 25 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"water60000": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.0467, "name": "water60001" },
+					{ "time": 0.0934, "name": "water60002" },
+					{ "time": 0.1401, "name": "water60003" },
+					{ "time": 0.1868, "name": "water60004" },
+					{ "time": 0.2333, "name": "water60005" },
+					{ "time": 0.2802, "name": "water60006" },
+					{ "time": 0.3269, "name": "water60007" },
+					{ "time": 0.3736, "name": "water60008" },
+					{ "time": 0.4203, "name": "water60009" },
+					{ "time": 0.467, "name": "water60010" }
+				]
+			}
+		}
+	}
+}
+}

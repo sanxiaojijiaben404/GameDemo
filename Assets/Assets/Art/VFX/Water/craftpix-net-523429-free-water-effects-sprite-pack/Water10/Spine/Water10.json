@@ -1,0 +1,60 @@
+{
+"skeleton": {
+	"hash": "Tvwx0yPSxXdDk1mxa5lr+fVQOWw",
+	"spine": "3.8.75",
+	"x": 269.51,
+	"y": -306.51,
+	"width": 45,
+	"height": 37,
+	"images": "./image/",
+	"audio": "D:/исходники/Water/Water10/image"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 78.64, "rotation": -3.05, "x": 267.17, "y": -294.21 }
+],
+"slots": [
+	{ "name": "water100000", "bone": "bone", "attachment": "water100000" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"water100000": {
+				"water100000": { "x": 24.47, "y": 7.52, "rotation": 3.05, "width": 45, "height": 37 },
+				"water100001": { "x": 24.05, "y": 8.34, "rotation": 3.05, "width": 84, "height": 41 },
+				"water100002": { "x": 108.55, "y": 109.06, "rotation": 3.05, "width": 512, "height": 343 },
+				"water100003": { "x": 21.11, "y": 36.2, "rotation": 3.05, "width": 216, "height": 110 },
+				"water100004": { "x": 26.17, "y": 45.57, "rotation": 3.05, "width": 291, "height": 133 },
+				"water100005": { "x": 18.04, "y": 54.48, "rotation": 3.05, "width": 324, "height": 147 },
+				"water100006": { "x": 30.03, "y": 66.86, "rotation": 3.05, "width": 345, "height": 169 },
+				"water100007": { "x": 108.55, "y": 109.06, "rotation": 3.05, "width": 512, "height": 343 },
+				"water100008": { "x": 59.17, "y": 94.7, "rotation": 3.05, "width": 409, "height": 223 },
+				"water100009": { "x": 61.54, "y": 93.19, "rotation": 3.05, "width": 415, "height": 222 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"water100000": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.0333, "name": "water100000" },
+					{ "time": 0.0667, "name": "water100001" },
+					{ "time": 0.1, "name": "water100002" },
+					{ "time": 0.1333, "name": "water100003" },
+					{ "time": 0.1667, "name": "water100004" },
+					{ "time": 0.2, "name": "water100005" },
+					{ "time": 0.2333, "name": "water100006" },
+					{ "time": 0.2667, "name": "water100007" },
+					{ "time": 0.3, "name": "water100008" },
+					{ "time": 0.3333, "name": "water100009" },
+					{ "time": 0.3667, "name": null }
+				]
+			}
+		}
+	}
+}
+}

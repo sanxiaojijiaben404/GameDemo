@@ -1,0 +1,181 @@
+{ "skeleton": { "images": "D:/исходники/Water/Water9/image/" },
+"PhotoshopToSpine": { "scale": 0.71, "padding": 1, "trim": true },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "water90020", "bone": "root", "attachment": "water90020" },
+	{ "name": "water90021", "bone": "root", "attachment": "water90021" },
+	{ "name": "water90022", "bone": "root", "attachment": "water90022" },
+	{ "name": "water90023", "bone": "root", "attachment": "water90023" },
+	{ "name": "water90024", "bone": "root", "attachment": "water90024" },
+	{ "name": "water90025", "bone": "root", "attachment": "water90025" },
+	{ "name": "water90026", "bone": "root", "attachment": "water90026" },
+	{ "name": "water90027", "bone": "root", "attachment": "water90027" },
+	{ "name": "water90028", "bone": "root", "attachment": "water90028" },
+	{ "name": "water90029", "bone": "root", "attachment": "water90029" },
+	{ "name": "water90030", "bone": "root", "attachment": "water90030" },
+	{ "name": "water90031", "bone": "root", "attachment": "water90031" },
+	{ "name": "water90032", "bone": "root", "attachment": "water90032" },
+	{ "name": "water90033", "bone": "root", "attachment": "water90033" },
+	{ "name": "water90034", "bone": "root", "attachment": "water90034" },
+	{ "name": "water90035", "bone": "root", "attachment": "water90035" },
+	{ "name": "water90036", "bone": "root", "attachment": "water90036" },
+	{ "name": "water90037", "bone": "root", "attachment": "water90037" },
+	{ "name": "water90038", "bone": "root", "attachment": "water90038" },
+	{ "name": "water90039", "bone": "root", "attachment": "water90039" },
+	{ "name": "water90040", "bone": "root", "attachment": "water90040" },
+	{ "name": "water90041", "bone": "root", "attachment": "water90041" },
+	{ "name": "water90000", "bone": "root", "attachment": "water90000" },
+	{ "name": "water90001", "bone": "root", "attachment": "water90001" },
+	{ "name": "water90002", "bone": "root", "attachment": "water90002" },
+	{ "name": "water90003", "bone": "root", "attachment": "water90003" },
+	{ "name": "water90004", "bone": "root", "attachment": "water90004" },
+	{ "name": "water90005", "bone": "root", "attachment": "water90005" },
+	{ "name": "water90006", "bone": "root", "attachment": "water90006" },
+	{ "name": "water90007", "bone": "root", "attachment": "water90007" },
+	{ "name": "water90008", "bone": "root", "attachment": "water90008" },
+	{ "name": "water90009", "bone": "root", "attachment": "water90009" },
+	{ "name": "water90010", "bone": "root", "attachment": "water90010" },
+	{ "name": "water90011", "bone": "root", "attachment": "water90011" },
+	{ "name": "water90012", "bone": "root", "attachment": "water90012" },
+	{ "name": "water90013", "bone": "root", "attachment": "water90013" },
+	{ "name": "water90014", "bone": "root", "attachment": "water90014" },
+	{ "name": "water90015", "bone": "root", "attachment": "water90015" },
+	{ "name": "water90016", "bone": "root", "attachment": "water90016" },
+	{ "name": "water90017", "bone": "root", "attachment": "water90017" },
+	{ "name": "water90018", "bone": "root", "attachment": "water90018" },
+	{ "name": "water90019", "bone": "root", "attachment": "water90019" }
+],
+"skins": {
+	"default": {
+		"water90020": {
+			"water90020": { "x": 365.81, "y": -221.57, "width": 221, "height": 279 }
+		},
+		"water90021": {
+			"water90021": { "x": 381.99, "y": -208.63, "width": 242, "height": 273 }
+		},
+		"water90022": {
+			"water90022": { "x": 388.36, "y": -206.79, "width": 259, "height": 275 }
+		},
+		"water90023": {
+			"water90023": { "x": 384.57, "y": -208.13, "width": 250, "height": 272 }
+		},
+		"water90024": {
+			"water90024": { "x": 374.35, "y": -182.29, "width": 275, "height": 226 }
+		},
+		"water90025": {
+			"water90025": { "x": 371.8, "y": -182.71, "width": 277, "height": 224 }
+		},
+		"water90026": {
+			"water90026": { "x": 368.12, "y": -153.06, "width": 281, "height": 257 }
+		},
+		"water90027": {
+			"water90027": { "x": 371.72, "y": -131.06, "width": 274, "height": 213 }
+		},
+		"water90028": {
+			"water90028": { "x": 371.14, "y": -125.01, "width": 270, "height": 208 }
+		},
+		"water90029": {
+			"water90029": { "x": 376.72, "y": -125.43, "width": 284, "height": 206 }
+		},
+		"water90030": {
+			"water90030": { "x": 381.24, "y": -116.82, "width": 276, "height": 176 }
+		},
+		"water90031": {
+			"water90031": { "x": 385.29, "y": -117.37, "width": 277, "height": 170 }
+		},
+		"water90032": {
+			"water90032": { "x": 386.82, "y": -110.31, "width": 290, "height": 136 }
+		},
+		"water90033": {
+			"water90033": { "x": 379.64, "y": -109.1, "width": 287, "height": 135 }
+		},
+		"water90034": {
+			"water90034": { "x": 377.95, "y": -107.05, "width": 268, "height": 138 }
+		},
+		"water90035": {
+			"water90035": { "x": 382.47, "y": -114.07, "width": 260, "height": 135 }
+		},
+		"water90036": {
+			"water90036": { "x": 377.94, "y": -119.17, "width": 241, "height": 131 }
+		},
+		"water90037": {
+			"water90037": { "x": 371.55, "y": -122.56, "width": 241, "height": 125 }
+		},
+		"water90038": {
+			"water90038": { "x": 373.44, "y": -125.53, "width": 232, "height": 121 }
+		},
+		"water90039": {
+			"water90039": { "x": 362.62, "y": -126.74, "width": 199, "height": 122 }
+		},
+		"water90040": {
+			"water90040": { "x": 347.12, "y": -125.08, "width": 168, "height": 113 }
+		},
+		"water90041": {
+			"water90041": { "x": 338.91, "y": -125.79, "width": 153, "height": 113 }
+		},
+		"water90000": {
+			"water90000": { "x": 393.93, "y": -333.89, "width": 33, "height": 18 }
+		},
+		"water90001": {
+			"water90001": { "x": 393.54, "y": -329.79, "width": 45, "height": 24 }
+		},
+		"water90002": {
+			"water90002": { "x": 392.42, "y": -323.72, "width": 74, "height": 36 }
+		},
+		"water90003": {
+			"water90003": { "x": 381.73, "y": -303.2, "width": 108, "height": 83 }
+		},
+		"water90004": {
+			"water90004": { "x": 386.78, "y": -292.85, "width": 111, "height": 112 }
+		},
+		"water90005": {
+			"water90005": { "x": 388.94, "y": -292.59, "width": 121, "height": 120 }
+		},
+		"water90006": {
+			"water90006": { "x": 383.94, "y": -294.59, "width": 111, "height": 124 }
+		},
+		"water90007": {
+			"water90007": { "x": 383.52, "y": -291.59, "width": 113, "height": 118 }
+		},
+		"water90008": {
+			"water90008": { "x": 384.02, "y": -290.59, "width": 114, "height": 116 }
+		},
+		"water90009": {
+			"water90009": { "x": 370.25, "y": -291.38, "width": 139, "height": 119 }
+		},
+		"water90010": {
+			"water90010": { "x": 364.26, "y": -273.12, "width": 154, "height": 162 }
+		},
+		"water90011": {
+			"water90011": { "x": 366.94, "y": -247.79, "width": 148, "height": 215 }
+		},
+		"water90012": {
+			"water90012": { "x": 371.81, "y": -245.69, "width": 162, "height": 225 }
+		},
+		"water90013": {
+			"water90013": { "x": 381.52, "y": -247.27, "width": 180, "height": 231 }
+		},
+		"water90014": {
+			"water90014": { "x": 382.73, "y": -247.48, "width": 181, "height": 230 }
+		},
+		"water90015": {
+			"water90015": { "x": 384.73, "y": -244.77, "width": 185, "height": 226 }
+		},
+		"water90016": {
+			"water90016": { "x": 382.68, "y": -246.69, "width": 188, "height": 227 }
+		},
+		"water90017": {
+			"water90017": { "x": 371.51, "y": -245.85, "width": 204, "height": 231 }
+		},
+		"water90018": {
+			"water90018": { "x": 368.99, "y": -237.31, "width": 216, "height": 248 }
+		},
+		"water90019": {
+			"water90019": { "x": 367.36, "y": -222.99, "width": 217, "height": 279 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

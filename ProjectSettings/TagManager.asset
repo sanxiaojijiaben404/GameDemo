@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerAttackBox
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,8 +13,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - Player
   - 
   - 
   - 

@@ -1,0 +1,111 @@
+
+Water5.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+water50000
+  rotate: true
+  xy: 183, 13
+  size: 32, 45
+  orig: 32, 45
+  offset: 0, 0
+  index: -1
+water50013
+  rotate: true
+  xy: 183, 13
+  size: 32, 45
+  orig: 32, 45
+  offset: 0, 0
+  index: -1
+water50001
+  rotate: true
+  xy: 254, 10
+  size: 13, 45
+  orig: 13, 45
+  offset: 0, 0
+  index: -1
+water50002
+  rotate: false
+  xy: 230, 2
+  size: 22, 43
+  orig: 22, 43
+  offset: 0, 0
+  index: -1
+water50003
+  rotate: false
+  xy: 409, 105
+  size: 49, 95
+  orig: 49, 95
+  offset: 0, 0
+  index: -1
+water50004
+  rotate: false
+  xy: 332, 4
+  size: 91, 85
+  orig: 91, 85
+  offset: 0, 0
+  index: -1
+water50005
+  rotate: true
+  xy: 308, 91
+  size: 109, 99
+  orig: 109, 99
+  offset: 0, 0
+  index: -1
+water50006
+  rotate: false
+  xy: 183, 47
+  size: 123, 153
+  orig: 123, 153
+  offset: 0, 0
+  index: -1
+water50007
+  rotate: true
+  xy: 2, 2
+  size: 198, 179
+  orig: 198, 179
+  offset: 0, 0
+  index: -1
+water50008
+  rotate: false
+  xy: 533, 66
+  size: 282, 214
+  orig: 282, 214
+  offset: 0, 0
+  index: -1
+water50009
+  rotate: false
+  xy: 533, 282
+  size: 290, 228
+  orig: 290, 228
+  offset: 0, 0
+  index: -1
+water50010
+  rotate: true
+  xy: 285, 202
+  size: 308, 246
+  orig: 308, 246
+  offset: 0, 0
+  index: -1
+water50011
+  rotate: true
+  xy: 2, 202
+  size: 308, 281
+  orig: 308, 281
+  offset: 0, 0
+  index: -1
+water50012
+  rotate: true
+  xy: 254, 25
+  size: 20, 44
+  orig: 20, 44
+  offset: 0, 0
+  index: -1
+water50014
+  rotate: true
+  xy: 300, 32
+  size: 13, 30
+  orig: 13, 30
+  offset: 0, 0
+  index: -1

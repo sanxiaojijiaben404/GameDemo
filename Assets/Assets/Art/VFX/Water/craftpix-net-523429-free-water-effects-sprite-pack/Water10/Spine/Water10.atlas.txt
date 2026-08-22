@@ -1,0 +1,76 @@
+
+Water10.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+water100000
+  rotate: true
+  xy: 45, 41
+  size: 45, 37
+  orig: 45, 37
+  offset: 0, 0
+  index: -1
+water100001
+  rotate: true
+  xy: 2, 2
+  size: 84, 41
+  orig: 84, 41
+  offset: 0, 0
+  index: -1
+water100002
+  rotate: false
+  xy: 622, 160
+  size: 512, 343
+  orig: 512, 343
+  offset: 0, 0
+  index: -1
+water100003
+  rotate: false
+  xy: 1070, 48
+  size: 216, 110
+  orig: 216, 110
+  offset: 0, 0
+  index: -1
+water100004
+  rotate: false
+  xy: 777, 25
+  size: 291, 133
+  orig: 291, 133
+  offset: 0, 0
+  index: -1
+water100005
+  rotate: false
+  xy: 451, 9
+  size: 324, 147
+  orig: 324, 147
+  offset: 0, 0
+  index: -1
+water100006
+  rotate: true
+  xy: 451, 158
+  size: 345, 169
+  orig: 345, 169
+  offset: 0, 0
+  index: -1
+water100007
+  rotate: false
+  xy: 1136, 160
+  size: 512, 343
+  orig: 512, 343
+  offset: 0, 0
+  index: -1
+water100008
+  rotate: true
+  xy: 226, 94
+  size: 409, 223
+  orig: 409, 223
+  offset: 0, 0
+  index: -1
+water100009
+  rotate: true
+  xy: 2, 88
+  size: 415, 222
+  orig: 415, 222
+  offset: 0, 0
+  index: -1
