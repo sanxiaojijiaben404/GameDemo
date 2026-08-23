@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 283144557}
   - component: {fileID: 283144556}
   - component: {fileID: 283144555}
+  - component: {fileID: 283144560}
   - component: {fileID: 283144558}
   - component: {fileID: 283144559}
   m_Layer: 7
@@ -379,6 +380,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &283144560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283144552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c245c2930768ce439d7e53d8d4f2865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &287888380
 GameObject:
   m_ObjectHideFlags: 0
@@ -18265,6 +18278,9 @@ MonoBehaviour:
   AttackRange: 0.5
   AttackTime: 1
   AttackWindup: 0.5
+  AttackBox: {fileID: 365719174187309350, guid: ce0e5b85a33c2c14d8e509f10989adfc, type: 3}
+  AttackPoint1: {fileID: 16174522050104111}
+  AttackPoint2: {fileID: 1022540631}
   currentState: 1
   left: {fileID: 384530418}
   right: {fileID: 340301598}
@@ -18274,7 +18290,7 @@ MonoBehaviour:
   canMove: 1
   chaseSpeed: 1.75
   patrolSpeed: 1
-  player: {fileID: 0}
+  player: {fileID: 283144552}
   GetHitTime: 0.5
   isGetHit: 0
   GetHitForce: 5
