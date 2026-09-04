@@ -21126,6 +21126,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 560
       objectReference: {fileID: 0}
+    - target: {fileID: 2470838030447879569, guid: 24a8836f276debe47be1036aa7779ef7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.61
+      objectReference: {fileID: 0}
     - target: {fileID: 3225565768927025029, guid: 24a8836f276debe47be1036aa7779ef7, type: 3}
       propertyPath: m_text
       value: "AWSD\u63A7\u5236\uFF0C\u7A7A\u683C\u8DF3\u8DC3, \u5DE6\u952E\u653B\u51FB"
