@@ -1,6 +1,8 @@
-# Game Dome for our NTCompetition
+# Game Dome：Bunny Ear Hat   
 
-一个使用 Unity 开发的 2D 横版动作游戏 Demo
+ for our NTCompetition
+
+一个使用 Unity 开发的 2D 横版动作游戏 Demo: **Bunny Ear Hat**
 
 > 🚧施工中，待进一步补充游戏🎮描述
 

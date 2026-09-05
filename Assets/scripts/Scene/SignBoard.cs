@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class NewBehaviourScript : MonoBehaviour
+public class SignBoard : MonoBehaviour
 {
     [Header("ÌáÊ¾ÎÄ×Ö")]
     public string tipText;
