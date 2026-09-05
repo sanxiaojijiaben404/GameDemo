@@ -8,12 +8,15 @@ public class ResourceManager
     public ResourceDatabase database;
     //服务器通信：负责客户端和服务端资源数据同步
     public bool IsInitialized { get; private set;  }
+    public System.Action OnResourceChanged;
     private System.Action<ResourceData,System.Action<bool>> syncToServer;
+    private System.Action<ResourceData, System.Action<bool>> syncRemoveToServer;
     //构造函数
-    public ResourceManager(ResourceDatabase database, System.Action<ResourceData,System.Action<bool>> syncToServer)
+    public ResourceManager(ResourceDatabase database, System.Action<ResourceData,System.Action<bool>> syncToServer,System.Action<ResourceData,System.Action<bool>> syncRemoveToServer)
     {
         this.database = database;
         this.syncToServer = syncToServer;
+        this.syncRemoveToServer = syncRemoveToServer;
     }
     //判断背包是否满
     public bool IsFull()
@@ -29,7 +32,21 @@ public class ResourceManager
         //通知发送请求
         syncToServer?.Invoke(data,calllback);
     }
-    //TODO：减少资源，返回bool代表操作是否成功
+    //请求服务器减少资源
+    public void RequestRemoveResource(int id,int count,System.Action<bool> callback)
+    {
+        if(!HasEnough(id,count))
+        {
+            Debug.Log("资源不足");
+            callback?.Invoke(false);
+            return;
+        }
+        ResourceData data = new ResourceData();
+        data.id= id;
+        data.count= count;
+        syncRemoveToServer?.Invoke(data,callback);
+    }
+    //减少资源(备用）
     public bool RemoveResource(int id, int count)
     {
         ResourceData resourse = resources.Find(r => r.id == id);
@@ -51,7 +68,6 @@ public class ResourceManager
             count
         );
         return true;
-        //TODO：同步服务器
     }
     //查询指定ID资源当前数量
     public int GetResourceCount(int id)
@@ -91,6 +107,7 @@ public class ResourceManager
                 resource.name = config.itemName;
             }
         }
+        OnResourceChanged?.Invoke();
     }
     //服务器返回最新资源后更新客户端
     public void UpdateFromServer(List<ResourceData> serverResources)
@@ -125,11 +142,11 @@ public class ResourceManager
     }
     public void LoadFromSave(List<ResourceData> saveResources)
     {
-        resources=new List<ResourceData>(saveResources);
+        resources =new List<ResourceData>(saveResources);
         Debug.Log(
         "本地存档资源加载完成，资源数量："
         + resources.Count
-    );
+        );
         //根据资源数据库刷新资源名称
         foreach (ResourceData resource in resources)
         {

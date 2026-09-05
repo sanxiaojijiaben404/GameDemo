@@ -11,6 +11,7 @@ public class InventoryUI : MonoBehaviour
     //格子Prefab（挂载InventorySlotUI脚本）
     public GameObject slotPrefab;
     public InventoryIconConfig iconConfig;
+    public ResourceUseManager resourceUseManager;
     //逻辑管理器
     public ResourceSystemHost resourceSystem;
     private ResourceManager manager;
@@ -38,6 +39,17 @@ public class InventoryUI : MonoBehaviour
         if (manager == null && resourceSystem != null)
         {
             manager = resourceSystem.Manager;
+        }
+        if(manager != null)
+        {
+            manager.OnResourceChanged += Refresh;
+        }
+    }
+    private void OnDestroy()
+    {
+        if(manager!=null)
+        {
+            manager.OnResourceChanged -= Refresh;
         }
     }
     //刷新背包
@@ -75,6 +87,7 @@ public class InventoryUI : MonoBehaviour
             slot.SetActive(true); // 强制激活
             //获取格子上的UI组件
             InventorySlotUI ui = slot.GetComponent<InventorySlotUI>();
+            ui.resourceUseManager = resourceUseManager;
             //把资源数据传递给格子渲染文字
             ui.SetData(resource,iconConfig);
         }

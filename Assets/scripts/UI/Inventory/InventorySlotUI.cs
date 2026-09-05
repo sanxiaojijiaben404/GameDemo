@@ -11,10 +11,13 @@ public class InventorySlotUI : MonoBehaviour
 
     public Image slotBg;
     public Image iconImage;
-
+    public ResourceUseManager resourceUseManager;
+    private ResourceData currentData;
     // 外部调用入口：给格子填充资源数据，刷新UI显示
     public void SetData(ResourceData data, InventoryIconConfig config)
     {
+        
+        currentData = data;
         //安全空值判断，防止组件未拖拽出现空引用报错
         if (nameText != null)
         {
@@ -35,8 +38,26 @@ public class InventorySlotUI : MonoBehaviour
             Debug.LogError("无法加载图标！");
         }
     }
+    //点击格子使用资源
+    public void UseItem()
+    {
+        if (currentData == null)
+        {
+            Debug.Log("当前格子没有资源");
+            return;
+        }
+        if (resourceUseManager == null)
+        {
+            Debug.LogError("ResourceUseManager没有绑定");
+            return;
+        }
+        resourceUseManager.UseResource(
+            currentData.id
+        );
+    }
     public void ClearSlot()
     {
+        currentData = null;
         if (nameText) nameText.text = "";
         if (countText) countText.text = "";
         if (iconImage)

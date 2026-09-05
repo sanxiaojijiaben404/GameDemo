@@ -74,8 +74,25 @@ public class ResourceNetwork
         manager.LoadFromServer(data.resources);
         Debug.Log("客户端资源更新完成");
         callback?.Invoke(true);
-
     }
-
-
+    public IEnumerator RemoveResource(ResourceData resource,ResourceManager manager,System.Action<bool> callback)
+    {
+        string fullUrl = apiSettings.baseUrl + "/resource/remove";
+        string json = JsonUtility.ToJson(resource);
+        UnityWebRequest request = new UnityWebRequest(fullUrl, "POST");
+        byte[] body = System.Text.Encoding.UTF8.GetBytes(json);
+        request.uploadHandler = new UploadHandlerRaw(body);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        yield return request.SendWebRequest();
+        if (request.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError("资源扣除失败：" + request.error);
+            callback?.Invoke(false);
+            yield break;
+        }
+        bool getSuccess = false;
+        yield return GetResource(manager, (success) => { getSuccess = success; });
+        callback?.Invoke(getSuccess);
+    }
 }

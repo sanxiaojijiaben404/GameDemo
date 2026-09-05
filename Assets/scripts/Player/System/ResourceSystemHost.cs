@@ -25,7 +25,8 @@ public class ResourceSystemHost : MonoBehaviour
         // 创建资源管理器
         Manager = new ResourceManager(
             database,
-            AddResourceToServer
+            AddResourceToServer,
+            RemoveResourceFromServer
         );      
         Debug.Log("ResourceSystem初始化完成");
     }
@@ -38,5 +39,9 @@ public class ResourceSystemHost : MonoBehaviour
     public void AddResourceToServer(ResourceData data,System.Action<bool> callback)
     {
         StartCoroutine(Network.SendResource(data,Manager,callback));
+    }
+    public void RemoveResourceFromServer(ResourceData data,System.Action<bool> callback)
+    {
+        StartCoroutine(Network.RemoveResource(data,Manager,callback));
     }
 }
