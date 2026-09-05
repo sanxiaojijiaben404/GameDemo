@@ -257,6 +257,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceSystem: {fileID: 696828775}
   playerHealth: {fileID: 283144560}
+  playerMovement: {fileID: 283144555}
+  playerAttack: {fileID: 283144560}
+  database: {fileID: 11400000, guid: 5dc526595a31bb64493c6fa2a9353d04, type: 2}
 --- !u!4 &126609412
 Transform:
   m_ObjectHideFlags: 0
