@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5de9842dc25f33746a02892e845de0bc
+guid: 6f2348f869ef594499906b3228542f22
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Noto Sans SC
+  - Planes_ValMore
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

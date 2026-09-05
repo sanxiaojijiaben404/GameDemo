@@ -28,7 +28,7 @@ public class CmaraFallow : MonoBehaviour
 
         // 只计算 X 轴的目标位置，Y轴永远保持摄像机当前的 Y 值
         float targetX = target.position.x + offset.x;
-        targetX = Mathf.Clamp(targetX, 0, 19);
+        targetX = Mathf.Clamp(targetX, 0, 37);
         float fixedY = transform.position.y; 
         float fixedZ = offset.z;            
 

@@ -3,8 +3,10 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
+
 public class ExitGame : MonoBehaviour
 {
+    public ResourceSystemHost resourceSystem;
     public void QuitGame()
     {
 #if UNITY_EDITOR
@@ -13,6 +15,7 @@ public class ExitGame : MonoBehaviour
 #else
         //打包exe之后：真正关闭游戏窗口
         Application.Quit();
+        esourceSystem.Manager.ClearResources();
 #endif
     }
 }
