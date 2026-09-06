@@ -69,4 +69,24 @@ public class AttackControl : MonoBehaviour
         yield return new WaitForSeconds(invulnerableDuration);
         invulnerable = false;
     }
+
+    //增加回血方法
+    public virtual void Heal(float amount)
+    {
+        currentHealth += amount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        if (hpSlider != null)
+        {
+            hpSlider.value = currentHealth / maxHealth;
+        }
+        Debug.Log(
+            "回血:"
+            + amount
+            + " 当前血量:"
+            + currentHealth
+        );
+    }
 }
