@@ -3,6 +3,9 @@ public class ResourceUseManager : MonoBehaviour
 {
     public ResourceSystemHost resourceSystem;
     public AttackControl playerHealth;
+    public MoveAndJump playerMovement;
+    public PlayerAttackControl playerAttack;
+    public ResourceDatabase database;
     public void UseResource(int id)
     {
         ResourceConfig config =resourceSystem.database.GetResource(id);
@@ -20,30 +23,30 @@ public class ResourceUseManager : MonoBehaviour
                 }
                 ApplyEffect(id);
             }
-        );
+        );  
     }
     private void ApplyEffect(int id)
     {
-        switch (id)
+        ResourceConfig config=database.GetResource(id);
+        switch(config.effectType)
         {
-            //布料碎片
-            case 1001:
-                playerHealth.Heal(40);
+            case ResourceEffectType.Heal:
+                if(playerHealth != null)
+                {
+                    playerHealth.Heal(config.effectValue);
+                }
                 break;
-            //疗愈草药
-            case 1002:
-                playerHealth.Heal(20);
-                break;
-            //移速草药
-            case 1003:
-                Debug.Log("增加移动速度");
-                break;
-            //攻击草药
-            case 1004:
-                Debug.Log("增加攻击力");
-                break;
-            default:
-                Debug.Log("无效果资源");
+            case ResourceEffectType.SpeedUp:
+                if (playerMovement != null)
+                {
+                    playerMovement.IncreaseMoveSpeed(config.effectValue,config.effectDuration);
+                }
+                    break;
+            case ResourceEffectType.AttackUp:
+                if(playerAttack != null)
+                {
+                    playerAttack.IncreaseAttackDamage(config.effectValue,config.effectDuration);
+                }
                 break;
         }
     }

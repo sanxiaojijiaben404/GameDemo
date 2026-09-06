@@ -29,7 +29,12 @@ public class InventoryUI : MonoBehaviour
             //打开时刷新
             if (panel.activeSelf)
             {
+                Time.timeScale = 0f;
                 Refresh();
+            }
+            else
+            {
+                Time.timeScale = 1f;
             }
         }
     }

@@ -7,7 +7,11 @@ public class MoveAndJump : MonoBehaviour
 {
     [Header("移动设置")]
     public float moveSpeed = 5f;         
-    public float jumpForce = 7f;         
+    public float jumpForce = 7f;
+
+    //增加一个基础速度
+    private float baseMoveSpeed;
+    private Coroutine speedCoroutine;
 
     [Header("地面检测")]
     public Transform groundCheckPoint;   
@@ -26,6 +30,8 @@ public class MoveAndJump : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        //记录基础速度
+        baseMoveSpeed = moveSpeed;
     }
 
     void Update()
@@ -80,6 +86,30 @@ public class MoveAndJump : MonoBehaviour
     public void PlayerHurt ()
     {
         anim.SetTrigger("hurt");
+    }
+
+    //增加移动速度
+    public void IncreaseMoveSpeed(float amount, float duration)
+    {
+        //如果之前已经有速度Buff，先停止之前的计时
+        if (speedCoroutine != null)
+        {
+            StopCoroutine(speedCoroutine);
+        }
+
+        //重新开始Buff
+        speedCoroutine = StartCoroutine(SpeedBuffCoroutine(amount, duration)
+        );
+    }
+    //增加协程
+    private IEnumerator SpeedBuffCoroutine(float amount, float duration)
+    {
+        moveSpeed = baseMoveSpeed + amount;
+        Debug.Log("移动速度增加：" + amount + " 当前移动速度：" + moveSpeed);
+        yield return new WaitForSeconds(duration);
+        moveSpeed = baseMoveSpeed;
+        Debug.Log("移动速度Buff结束，恢复基础速度：" + baseMoveSpeed);
+        speedCoroutine = null;
     }
 
     public void PlayerDead()

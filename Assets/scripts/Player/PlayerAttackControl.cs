@@ -12,6 +12,10 @@ public class PlayerAttackControl : AttackControl
     public float offsetX = 1f;
     public float offsetY = 1f;
 
+    //增加攻击力基础
+    private float baseAttackDamage;
+    private Coroutine attackCoroutine;
+
     private SpriteRenderer spriteRenderer;
     public LayerMask Enemy;
     private void Awake()
@@ -43,13 +47,29 @@ public class PlayerAttackControl : AttackControl
         }
     }
 
+    //增加攻击力
+    public void IncreaseAttackDamage(float amount, float duration)
+    {
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+        }
+        attackCoroutine = StartCoroutine(AttackBuffCoroutine(amount, duration)
+        );
+    }
+    private IEnumerator AttackBuffCoroutine(float amount, float duration)
+    {
+        meleeAttackDamage = baseAttackDamage + amount;
+        Debug.Log("攻击力增加：" + amount + " 当前攻击力：" + meleeAttackDamage);
+        yield return new WaitForSeconds(duration);
+        meleeAttackDamage = baseAttackDamage;
+        Debug.Log("攻击力Buff结束，恢复基础攻击力：" + baseAttackDamage);
+        attackCoroutine = null;
+    }
+
     //绘图用于测试
     private void OnDrawGizmosSelected()
     {
-
-
-        
-
         Gizmos.color = Color.blue  ;
         Gizmos.DrawWireCube(AttackAreaPos ,attackSize);
     }
