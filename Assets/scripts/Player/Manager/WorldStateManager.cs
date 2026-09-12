@@ -77,4 +77,11 @@ public class WorldStateManager : MonoBehaviour
             defeatedEnemyIds.Count
         );
     }
+    //清空当前游戏的世界状态
+    public void ClearWorldState()
+    {
+        openedChestIds.Clear();
+        defeatedEnemyIds.Clear();
+        Debug.Log("世界状态已清空");
+    }
 }

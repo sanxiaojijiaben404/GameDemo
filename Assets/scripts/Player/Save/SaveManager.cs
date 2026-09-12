@@ -11,7 +11,6 @@ public class SaveManager : MonoBehaviour
     {
         LoadGame();
     }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.X) && !_isSaving)
@@ -19,7 +18,10 @@ public class SaveManager : MonoBehaviour
             SaveGame();
         }
     }
-
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     public void SaveGame()
     {
         _isSaving = true;
@@ -76,5 +78,41 @@ public class SaveManager : MonoBehaviour
         {
             worldStateManager.LoadWorldState(data.openedChestIds, data.defeatedEnemyIds);
         }
+    }
+    public void ClearGameData(System.Action<bool> onComplete = null)
+    {
+        Debug.Log("开始执行 ClearGameData");
+        SaveNetwork saveNetwork =new SaveNetwork(resourceSystem.apiSettings);
+        StartCoroutine(
+            saveNetwork.ClearSave(saveSuccess =>
+            {
+                if (!saveSuccess)
+                {
+                    onComplete?.Invoke(false);
+                    return;
+                }
+                Debug.Log("save清理成功，开始清理resources");
+                StartCoroutine(
+                    saveNetwork.ClearResources(resourceSuccess =>
+                    {
+                        if (resourceSuccess)
+                        {
+                            Debug.Log("resources清理成功");
+                            //清Unity缓存
+                            resourceSystem.Manager.ClearResources();
+                            if (worldStateManager != null)
+                            {
+                                worldStateManager.ClearWorldState();
+                            }
+                            onComplete?.Invoke(true);
+                        }
+                        else
+                        {
+                            onComplete?.Invoke(false);
+                        }
+                    })
+                );
+            })
+        );
     }
 }
