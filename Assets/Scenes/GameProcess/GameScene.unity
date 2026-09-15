@@ -4611,6 +4611,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5332133408251473159}
     m_Modifications:
+    - target: {fileID: 2085903327363096886, guid: b25ef59957d7a724aa6bde37a06bfcb4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 2085903327363096886, guid: b25ef59957d7a724aa6bde37a06bfcb4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 346
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470838030447879569, guid: b25ef59957d7a724aa6bde37a06bfcb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470838030447879569, guid: b25ef59957d7a724aa6bde37a06bfcb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.22
+      objectReference: {fileID: 0}
     - target: {fileID: 3340084665968407428, guid: b25ef59957d7a724aa6bde37a06bfcb4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -32881,6 +32897,9 @@ MonoBehaviour:
   saveCgDuration: 30
   vpEnding: {fileID: 160484372}
   uiEnding: {fileID: 1909575752}
+  saveManager: {fileID: 0}
+  resourceSystem: {fileID: 0}
+  worldStateManager: {fileID: 0}
   autoPlayOpening: 1
   mainBgmAudio: {fileID: 887819935}
   endingTargetSceneIndex: 2
