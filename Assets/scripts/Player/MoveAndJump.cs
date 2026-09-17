@@ -43,7 +43,7 @@ public class MoveAndJump : MonoBehaviour
         //记录基础速度
         baseMoveSpeed = moveSpeed;
 
-        //⚠️把刚体原生重力缩放置1，交给代码控制重力
+        //把刚体原生重力缩放置1，交给代码控制重力
         rb.gravityScale = 1f;
     }
 

@@ -1470,7 +1470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f1b00db66eda047807cd6acaea8fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiSettings: {fileID: 11400000, guid: b207da69022abc04da6b6ace614245fb, type: 2}
+  apiSettings: {fileID: 11400000, guid: 5bd684d5cc94cd24eb40d15d09467022, type: 2}
   slot1Star: {fileID: 1207210589}
   slot2Star: {fileID: 474613694}
   slot3Star: {fileID: 2116767539}
