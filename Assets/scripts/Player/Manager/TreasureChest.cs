@@ -10,6 +10,8 @@ public class TreasureChest : MonoBehaviour
     private ResourceManager manager;
     //世界状态管理器
     public WorldStateManager worldStateManager;
+    // 是否正在开启
+    private bool opening = false;
     //是否已经开启
     private bool opened = false;
     [Header("宝箱唯一ID")]
@@ -34,63 +36,108 @@ public class TreasureChest : MonoBehaviour
             }
         }
     }
-    void Awake()
+   private void Awake()
     {
         //获取自身AudioSource组件
         AudioSource = GetComponent<AudioSource>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("碰到宝箱:" + other.name);
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player"))
         {
-            OpenChest();
+            return;
         }
+        Debug.Log("碰到宝箱：" + other.name);
+        OpenChest();
     }
     void OpenChest()
     {
-        if (opened) return;
-        opened = true;
+        // 已经打开或者正在开启
+        if (opened || opening)
+        {
+            return;
+        }
         if (manager == null)
         {
             Debug.LogError("manager为空");
             return;
         }
+        if (rewards == null || rewards.Count == 0)
+        {
+            Debug.LogWarning("宝箱没有奖励：" + chestId);
+            return;
+        }
+        // 开始开启流程
+        opening = true;
         //播放音效
         if (openChestClip != null && AudioSource != null)
         {
             AudioSource.PlayOneShot(openChestClip);
         }
-        int requestCount;
-        int successCount;
-        requestCount = rewards.Count;
-        successCount = 0;
-        foreach (var reward in rewards)
+        // 一个一个发送奖励
+        StartCoroutine(SendRewardsSequentially());
+    }
+    private IEnumerator SendRewardsSequentially()
+    {
+        for (int i = 0; i < rewards.Count; i++)
         {
-            manager.RequestAddResource(
-                reward.resourceID,
-                reward.amount,
-                success =>
-                {
-                    if (success)
-                    {
-                        successCount++;
-                        if (successCount == requestCount)
-                        {
-                            Debug.Log("宝箱全部奖励确认成功");
-                            if (worldStateManager != null)
-                            {
-                                worldStateManager.RegisterOpenedChest(chestId);
-                            }
-                            //所有奖励都成功后，一次性显示全部奖励
-                            ResourceGetTip.Instance?.Show( rewards,manager);
-                            Destroy( gameObject,openChestClip != null ? openChestClip.length : 0.1f
-                            );
-                        }
-                    }
-                }
-            );
+            ChestReward reward = rewards[i];
+            bool requestFinished = false;
+            bool requestSuccess = false;
+            Debug.Log( "正在发送宝箱奖励：" +reward.resourceID + " +" + reward.amount);
+            manager.RequestAddResource(reward.resourceID, reward.amount,success =>{requestSuccess = success;requestFinished = true; } );
+            // 等待当前奖励请求完成
+            yield return new WaitUntil(() => requestFinished );
+            // 当前奖励失败
+            if (!requestSuccess)
+            {
+                Debug.LogError( "宝箱奖励发送失败：" + reward.resourceID);
+                opening = false;
+                yield break;
+            }
+            Debug.Log( "宝箱奖励发送成功：" +reward.resourceID);
         }
+        // 所有奖励全部发送成功
+        Debug.Log("宝箱全部奖励发送成功");
+        // 最后统一获取一次服务器最新数据
+        bool loadFinished = false;
+        bool loadSuccess = false;
+        StartCoroutine(
+            resourceSystem.Network.GetResource(
+                manager,
+                success =>{loadSuccess = success;loadFinished = true;}
+            )
+        );
+        yield return new WaitUntil(
+            () => loadFinished
+        );
+        if (!loadSuccess)
+        {
+            Debug.LogError(
+                "宝箱奖励已经写入服务器，但刷新客户端背包失败"
+            );
+            opening = false;
+            yield break;
+        }
+        // 认为宝箱开启成功
+        opened = true;
+        opening = false;
+        // 记录世界状态
+        if (worldStateManager != null)
+        {
+            worldStateManager.RegisterOpenedChest(chestId);
+        }
+        // 显示获得奖励
+        ResourceGetTip.Instance?.Show(
+            rewards,
+            manager
+        );
+        Debug.Log(
+            "宝箱开启完成：" + chestId
+        );
+        // 播放完音效后销毁
+        float destroyDelay =openChestClip != null ? openChestClip.length : 0.1f;
+        Destroy(gameObject, destroyDelay);
     }
 }
 
