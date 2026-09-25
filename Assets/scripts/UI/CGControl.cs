@@ -69,6 +69,9 @@ public class CGControl : MonoBehaviour
         {
             mainBgmAudio.Pause();
         }
+        //设置开始播放CG状态
+        PauseManager.Instance.StartCutscene();
+        Time.timeScale = 0;
     }
     //开场播放完毕回调
     void OnOpeningFinish(VideoPlayer player)
@@ -81,7 +84,9 @@ public class CGControl : MonoBehaviour
         {
             mainBgmAudio.UnPause();
         }
-        //SceneManager.LoadScene("MainGame");
+        //设置结束播放CG状态
+        PauseManager.Instance.EndCutscene();
+        Time.timeScale = 1;
     }
     //调用：播放结局CG
     public void PlayEnding()
@@ -92,10 +97,16 @@ public class CGControl : MonoBehaviour
         {
             mainBgmAudio.Pause();
         }
+        //设置CG播放状态
+        PauseManager.Instance.StartCutscene();
+        Time.timeScale = 0;
     }
     void OnEndingFinish(VideoPlayer player)
     {
-        Debug.Log("===== 结局CG播放结束 =====");
+        Debug.Log("结局CG播放结束");
+        //设置CG播放状态
+        PauseManager.Instance.EndCutscene();
+        Time.timeScale = 1;
         vpEnding.Stop();
         if (saveManager == null)
         {
@@ -122,7 +133,7 @@ public class CGControl : MonoBehaviour
             uiEnding.gameObject.SetActive(false);
         }
     }
-    //==== 修改这里：增加可选回调参数 ====
+    //增加可选回调参数
     public void PlaySaveCg(Action onComplete = null)
     {
         Debug.Log($"PlaySaveCg被调用，_isPlayingSaveCg={_isPlayingSaveCg}");
@@ -141,7 +152,7 @@ public class CGControl : MonoBehaviour
         Debug.Log("开始启动存档CG协程");
         StartCoroutine(PlaySaveCgCoroutine(onComplete));
     }
-    //==== 协程接收回调参数 ====
+    // 协程接收回调参数
     private IEnumerator PlaySaveCgCoroutine(Action onComplete)
     {
         _isPlayingSaveCg = true;
@@ -149,6 +160,9 @@ public class CGControl : MonoBehaviour
         {
             mainBgmAudio.Pause();
         }
+        //设置CG播放状态
+        PauseManager.Instance.RequestPause();
+        Time.timeScale = 0;
         uiSave.gameObject.SetActive(true);
         vpSave.Play();
         //等待视频加载准备完成
@@ -176,9 +190,12 @@ public class CGControl : MonoBehaviour
         {
             mainBgmAudio.UnPause();
         }
+        //设置CG播放状态
+        PauseManager.Instance.EndCutscene();
+        Time.timeScale = 1;
         _isPlayingSaveCg = false;
         Debug.Log("存档CG流程结束");
-        //==== 全部结束后执行回调 ====
+        //全部结束后执行回调
         onComplete?.Invoke();
     }
 }

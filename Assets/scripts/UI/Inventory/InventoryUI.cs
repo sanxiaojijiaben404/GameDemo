@@ -29,12 +29,12 @@ public class InventoryUI : MonoBehaviour
             //打开时刷新
             if (panel.activeSelf)
             {
-                Time.timeScale = 0f;
+                PauseManager.Instance.RequestPause();
                 Refresh();
             }
             else
             {
-                Time.timeScale = 1f;
+                PauseManager.Instance.CancelPause();
             }
         }
     }

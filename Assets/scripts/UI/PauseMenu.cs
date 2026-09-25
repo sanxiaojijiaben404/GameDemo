@@ -40,7 +40,7 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         pauseMenuPanel.SetActive(true);
-        Time.timeScale = 0f;
+        PauseManager.Instance.RequestPause();
         isPaused = true;
     }
 
@@ -48,14 +48,14 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("【继续游戏】按钮被点击");
         pauseMenuPanel.SetActive(false);
-        Time.timeScale = 1f;
+        PauseManager.Instance.CancelPause();
         isPaused = false;
     }
 
     // 返回开始菜单，不再关闭程序
     public void QuitGame()
     {
-        Time.timeScale = 1f;
+        PauseManager.Instance.CancelPause();
         SceneManager.LoadScene("StartScene");
     }
 }
