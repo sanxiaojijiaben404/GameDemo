@@ -24,17 +24,21 @@ public class InventoryUI : MonoBehaviour
         //按I打开关闭背包
         if (Input.GetKeyDown(KeyCode.I))
         {
+            if (PauseManager.Instance.isCutscenePlaying)
+            {
+                return;
+            }
             //取反当前激活状态
             panel.SetActive(!panel.activeSelf);
             //打开时刷新
             if (panel.activeSelf)
             {
-                Time.timeScale = 0f;
+                PauseManager.Instance.RequestPause();
                 Refresh();
             }
             else
             {
-                Time.timeScale = 1f;
+                PauseManager.Instance.CancelPause();
             }
         }
     }
