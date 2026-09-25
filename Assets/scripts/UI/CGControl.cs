@@ -156,13 +156,15 @@ public class CGControl : MonoBehaviour
     private IEnumerator PlaySaveCgCoroutine(Action onComplete)
     {
         _isPlayingSaveCg = true;
+
+        PauseManager.Instance.StartCutscene();
+
+        Time.timeScale = 0;
         if (mainBgmAudio != null)
         {
             mainBgmAudio.Pause();
         }
-        //设置CG播放状态
-        PauseManager.Instance.RequestPause();
-        Time.timeScale = 0;
+
         uiSave.gameObject.SetActive(true);
         vpSave.Play();
         //等待视频加载准备完成
@@ -190,8 +192,8 @@ public class CGControl : MonoBehaviour
         {
             mainBgmAudio.UnPause();
         }
-        //设置CG播放状态
-        PauseManager.Instance.EndCutscene();
+
+        PauseManager.Instance.EndCutscene(); 
         Time.timeScale = 1;
         _isPlayingSaveCg = false;
         Debug.Log("存档CG流程结束");
